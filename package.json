@@ -2,7 +2,7 @@
   "name": "react-native-iap",
   "version": "4.4.8",
   "description": "React Native In App Purchase Module.",
-  "main": "index.js",
+  "main": "index.ts",
   "types": "index.d.ts",
   "postinstall": "dooboolab-welcome postinstall",
   "scripts": {
@@ -14,7 +14,8 @@
     "test:typescript": "tsc --noEmit",
     "tsc:sync": "npx typesync",
     "tsc": "tsc",
-    "validate": "npm run lint && npm run test:typescript && npm run test:flow && npm run test"
+    "validate": "npm run lint && npm run test:typescript && npm run test:flow && npm run test",
+    "prepare": "npm install && npm run build"
   },
   "repository": {
     "type": "git",
