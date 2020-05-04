@@ -443,7 +443,7 @@ public class RNIapModule extends ReactContextBaseJavaModule implements Purchases
         }
 
         if (accountId != null) {
-          builder.setAccountId(accountId);
+          builder.setObfuscatedAccountId(accountId);
         }
         if (developerId != null) {
           builder.setDeveloperId(developerId);
@@ -466,7 +466,7 @@ public class RNIapModule extends ReactContextBaseJavaModule implements Purchases
                         .setPurchaseToken(token)
                         .setDeveloperPayload(developerPayLoad)
                         .build();
-                        
+
         billingClient.acknowledgePurchase(acknowledgePurchaseParams, new AcknowledgePurchaseResponseListener() {
           @Override
           public void onAcknowledgePurchaseResponse(BillingResult billingResult) {
