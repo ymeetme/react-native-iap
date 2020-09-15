@@ -4,7 +4,7 @@
   "description": "React Native In App Purchase Module.",
   "main": "index.ts",
   "types": "index.d.ts",
-  "postinstall": "dooboolab-welcome postinstall",
+  "postinstall": "dooboolab-welcome postinstall && npm install && npm run build",
   "scripts": {
     "build": "tsc && flowgen index.d.ts -o index.js.flow",
     "flow": "flow",
@@ -15,7 +15,6 @@
     "tsc:sync": "npx typesync",
     "tsc": "tsc",
     "validate": "npm run lint && npm run test:typescript && npm run test:flow && npm run test",
-    "prepare": "npm install && npm run build"
   },
   "repository": {
     "type": "git",
